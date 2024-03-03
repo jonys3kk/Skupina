@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+      <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            width: 300px;
+            margin: 0 auto;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+  <header>
+    <h1></h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Zpět na úvodní stránku</a></li>
+        <li><a href="procesory.html">Procesory</a></li>
+        <li><a href="pameti.html">Paměti</a></li>
+        <li><a href="graficke-karty.html">Grafické karty</a></li>
+<body>
+    <h1>Login Page</h1>
+    <div id="loginForm">
+        <form id="form">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+        <p id="error" class="error"></p>
+    </div>
+
+    <script>
+        document.getElementById("form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+            // Simulace přihlášení, můžete nahradit reálným ověřením na serveru
+            if (username === "admin" && password === "password") {
+                localStorage.setItem("loggedIn", true);
+                window.location.href = "secure-page.html"; // Přesměrování na zabezpečenou stránku
+            } else {
+                document.getElementById("error").textContent = "Invalid username or password";
+            }
+        });
+
+        // Kontrola, zda je uživatel přihlášen
+        window.addEventListener("DOMContentLoaded", function() {
+            if (localStorage.getItem("loggedIn")) {
+                window.location.href = "secure-page.html"; // Přesměrování na zabezpečenou stránku
+            }
+        });
+    </script>
+</body>
