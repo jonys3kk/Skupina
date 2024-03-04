@@ -1,33 +1,5 @@
 <!DOCTYPE html>
-<html lang="cs">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Počítačové komponenty</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <h1>Počítačové komponenty</h1>
-    <nav>
-      <ul>
-         <li><a href="procesory.html">Procesory</a></li>
-        <li><a href="graficke-karty.html">Grafické karty</a></li>
-        <li><a href="pameti.html">Paměti</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="info.html">O nás</a></li>
-      </ul>
-    </nav>
-  </header>
-  <label class="switch">
-    <input type="checkbox" id="modeToggle">
-    <span class="slider round"></span>
-  </label>
-  <script src="ligdar.js"></script>
-
-
-</body>
-</html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -71,3 +43,4 @@
 </head>
 <body onload="checkCookie()">
 </body>
+</html>
