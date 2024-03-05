@@ -6,6 +6,7 @@
     <title>Login Page</title>
       <link rel="stylesheet" href="styles.css">
     <style>
+        
         body {
             font-family: Arial, sans-serif;
         }
@@ -58,7 +59,7 @@
             var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
             
-            // Simulace přihlášení, můžete nahradit reálným ověřením na serveru
+            
             if (username === "admin" && password === "password") {
                 localStorage.setItem("loggedIn", true);
                 window.location.href = "secure-page.html"; // Přesměrování na zabezpečenou stránku
@@ -67,10 +68,10 @@
             }
         });
 
-        // Kontrola, zda je uživatel přihlášen
+
         window.addEventListener("DOMContentLoaded", function() {
             if (localStorage.getItem("loggedIn")) {
-                window.location.href = "secure-page.html"; // Přesměrování na zabezpečenou stránku
+                window.location.href = "secure-page.html"; //
             }
         });
     </script>
